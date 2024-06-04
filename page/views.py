@@ -13,6 +13,6 @@ class GetLugatViewSet(generics.ListAPIView, mixins.ListModelMixin, viewsets.Gene
     permission_classes = [AllowAny]
     queryset = Logat.objects.order_by('-id').all()
     filterset_class = LogatFilter
-    pagination_class = LargeResultsSetPagination
+    # pagination_class = LargeResultsSetPagination
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
 
